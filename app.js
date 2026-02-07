@@ -8,8 +8,8 @@
     nav_video: "Sponsored",
     nav_voo: "VOO",
     badge: "Welcome aboard",
-    hero_title_prefix: "Mobiflight for MIAT.",
-    hero_lead: "Tap VOO to start, or view flight info.",
+    hero_title_prefix: "Mobiflight — your friend in the sky.",
+    hero_lead: "The journey can be long, but it doesn't have to be boring.",
     cta_voo: "Open VOO",
     cta_flight: "Flight details",
     tag_qr: "QR onboarding in seconds",
@@ -99,8 +99,8 @@
     nav_video: "Ивээн тэтгэсэн",
     nav_voo: "VOO",
     badge: "Тавтай морил",
-    hero_title_prefix: "MIAT-д зориулсан Mobiflight.",
-    hero_lead: "VOO дээр дарж эхлээд, нислэгийн мэдээлэл үзнэ үү.",
+    hero_title_prefix: "Mobiflight — тэнгэрт таны найз.",
+    hero_lead: "Аяллын цаг урт байж болно, харин уйтгартай байх албагүй.",
     cta_voo: "VOO нээх",
     cta_flight: "Нислэгийн мэдээлэл",
     tag_qr: "QR-ээр 1 агшинд",
@@ -202,7 +202,7 @@ const setActiveLang = (lang) => {
   localStorage.setItem("voo_lang", lang);
 };
 
-const savedLang = localStorage.getItem("voo_lang") || "en";
+const savedLang = localStorage.getItem("voo_lang") || "mn";
 setActiveLang(savedLang);
 
 document.querySelectorAll("[data-lang]").forEach((btn) => {
