@@ -99,7 +99,7 @@
     nav_video: "Ивээн тэтгэсэн",
     nav_voo: "VOO",
     badge: "Тавтай морил",
-    hero_title_prefix: "Mobiflight — тэнгэрт таны найз, sky.",
+    hero_title_prefix: "Mobiflight — тэнгэрт таны найз.",
     hero_lead: "Аяллын цаг урт байж болно, харин уйтгартай байх албагүй.",
     cta_voo: "VOO нээх",
     cta_flight: "Нислэгийн мэдээлэл",
