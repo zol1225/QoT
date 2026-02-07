@@ -1,16 +1,16 @@
 ﻿const translations = {
   en: {
-    brand_title: "VOO Inflight",
-    brand_sub: "MIAT demo",
+    brand_title: "Mobiflight",
+    brand_sub: "for MIAT",
     nav_home: "Home",
     nav_flight: "Flight",
     nav_esim: "eSIM",
     nav_video: "Sponsored",
     nav_voo: "VOO",
     badge: "Welcome to MIAT",
-    hero_title_prefix: "Discover Mongolia above the clouds with",
+    hero_title_prefix: "Welcome to Mobiflight for MIAT. Your inflight gateway to",
     hero_lead:
-      "Scan the QR, connect instantly, and enjoy your inflight companion. Flight info, eSIM, sponsored video, and VOO streaming in one place.",
+      "Scan the QR, connect instantly, and enjoy Mobiflight. Flight info, eSIM, sponsored video, and VOO streaming in one place.",
     cta_voo: "Open VOO",
     cta_flight: "View Flight Info",
     tag_qr: "QR onboarding in seconds",
@@ -88,21 +88,21 @@
     voo_inside_1: "Originals, films, and series",
     voo_inside_2: "Mongolian music and audio",
     voo_inside_3: "Kids content and safe mode",
-    footer_left: "Powered by VOO - MIAT inflight demo",
+    footer_left: "Mobiflight for MIAT - powered by VOO",
     footer_right: "Need help? Ask the cabin crew."
   },
   mn: {
-    brand_title: "VOO нислэгийн",
-    brand_sub: "MIAT demo",
+    brand_title: "Mobiflight",
+    brand_sub: "MIAT-д зориулсан",
     nav_home: "Нүүр",
     nav_flight: "Нислэг",
     nav_esim: "eSIM",
     nav_video: "Ивээн тэтгэсэн",
     nav_voo: "VOO",
     badge: "MIAT-д тавтай морил",
-    hero_title_prefix: "Тэнгэрт Монголыг мэдрэх аяллыг",
+    hero_title_prefix: "MIAT-д зориулсан Mobiflight-д тавтай морил. Тэнгэрт Монголыг мэдрэх аяллыг",
     hero_lead:
-      "QR-аа уншуулж шууд холбогдоорой. Нислэгийн мэдээлэл, eSIM, ивээн тэтгэсэн видео, VOO стриминг бүгд нэг дор.",
+      "QR-аа уншуулж шууд холбогдоорой. Mobiflight-д нислэгийн мэдээлэл, eSIM, ивээн тэтгэсэн видео, VOO стриминг бүгд нэг дор.",
     cta_voo: "VOO нээх",
     cta_flight: "Нислэг харах",
     tag_qr: "QR-ээр 1 агшинд",
@@ -180,7 +180,7 @@
     voo_inside_1: "Оригинал, кино, цуврал",
     voo_inside_2: "Монгол хөгжим, аудио",
     voo_inside_3: "Хүүхдийн контент, safe mode",
-    footer_left: "VOO - MIAT нислэгийн демо",
+    footer_left: "Mobiflight - MIAT-д зориулсан, VOO-оор дэмжигдсэн",
     footer_right: "Тусламж хэрэгтэй бол стюардыг дуудна уу."
   }
 };
