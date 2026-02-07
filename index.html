@@ -40,68 +40,59 @@
 
         <div class="status-row">
           <span class="time">14:00</span>
-          <span class="status-text" data-i18n="status_text">MIAT inflight</span>
+          <div class="status-right">
+            <div class="status-icons" aria-hidden="true">
+              <span></span><span></span><span></span>
+            </div>
+            <span class="status-text" data-i18n="status_text">MIAT inflight</span>
+          </div>
         </div>
 
-        <section class="hero-intro">
-          <h1 data-i18n="hero_title_prefix">Mobiflight — тэнгэрт таны найз.</h1>
-          <p data-i18n="hero_lead">
-            Аяллын цаг урт байж болно, харин уйтгартай байх албагүй.
-          </p>
-        </section>
-
-        <div class="tab-row">
-          <button class="tab active" type="button" data-i18n="tab_voo">VOO</button>
-          <button class="tab" type="button" data-i18n="tab_movies">Movies</button>
-          <button class="tab" type="button" data-i18n="tab_music">Music</button>
-          <button class="tab" type="button" data-i18n="tab_kids">Kids</button>
-        </div>
-
-        <section class="feature">
-          <div class="section-head">
-            <h2 data-i18n="section_new">New release</h2>
-            <button class="chip" type="button" data-i18n="label_all">All</button>
+        <section class="aircraft-page">
+          <div class="aircraft-head">
+            <div>
+              <span class="section-tag" data-i18n="aircraft_tag">Aircraft</span>
+              <h1 class="aircraft-title">Boeing</h1>
+              <p class="aircraft-model">777-300ER</p>
+            </div>
+            <button class="chip chip-accent" type="button" data-i18n="aircraft_overview">
+              Overview
+            </button>
           </div>
-          <article class="feature-card">
-            <div class="feature-media">
-              <span class="feature-badge" data-i18n="feature_badge">New</span>
-              <h3 class="feature-title">Steppe Lights</h3>
-              <p class="feature-meta">2026 · 1h 40m · 13+</p>
-            </div>
-            <div class="feature-actions">
-              <a class="btn primary" href="voo.html" data-i18n="cta_watch">Watch now</a>
-              <a class="btn secondary" href="voo.html" data-i18n="cta_details">Details</a>
-            </div>
-          </article>
-        </section>
 
-        <section class="poster-section">
-          <div class="section-head">
-            <h2 data-i18n="section_popular">Popular</h2>
-            <button class="chip" type="button" data-i18n="label_all">All</button>
+          <div class="aircraft-panel">
+            <div class="aircraft-image">
+              <div class="aircraft-strip"></div>
+              <div class="aircraft-label">
+                <span data-i18n="aircraft_engine_label">Engines</span>
+                <strong>Trent XWB-97</strong>
+                <small><span data-i18n="aircraft_manu_label">Manufacturer</span> · Rolls-Royce</small>
+              </div>
+            </div>
+
+            <div class="spec-grid">
+              <div class="spec-card">
+                <span data-i18n="spec_engines">Engines</span>
+                <strong>Trent XWB-97</strong>
+              </div>
+              <div class="spec-card">
+                <span data-i18n="spec_tyre">Tyre</span>
+                <strong>Diameter 1.3m</strong>
+              </div>
+              <div class="spec-card">
+                <span data-i18n="spec_range">Range</span>
+                <strong>13,650 km</strong>
+              </div>
+              <div class="spec-card">
+                <span data-i18n="spec_speed">Cruise</span>
+                <strong>905 km/h</strong>
+              </div>
+            </div>
           </div>
-          <div class="poster-grid">
-            <div class="poster-card poster-1">
-              <div class="poster-art"></div>
-              <div class="poster-info">
-                <span class="poster-title">Steppe Tales</span>
-                <span class="poster-meta">1h 25m</span>
-              </div>
-            </div>
-            <div class="poster-card poster-2">
-              <div class="poster-art"></div>
-              <div class="poster-info">
-                <span class="poster-title">Skybound</span>
-                <span class="poster-meta">1h 55m</span>
-              </div>
-            </div>
-            <div class="poster-card poster-3">
-              <div class="poster-art"></div>
-              <div class="poster-info">
-                <span class="poster-title">Nomad Nights</span>
-                <span class="poster-meta">2h 05m</span>
-              </div>
-            </div>
+
+          <div class="cta-row">
+            <a class="btn primary" href="voo.html" data-i18n="cta_voo">Open VOO</a>
+            <a class="btn secondary" href="flight.html" data-i18n="cta_flight">Flight details</a>
           </div>
         </section>
 

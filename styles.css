@@ -179,6 +179,24 @@ a {
   letter-spacing: 0.18em;
 }
 
+.status-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.status-icons {
+  display: flex;
+  gap: 4px;
+}
+
+.status-icons span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.6);
+}
+
 .time {
   font-weight: 600;
   color: var(--ink);
@@ -192,6 +210,136 @@ a {
   border: 1px solid var(--stroke);
 }
 
+.aircraft-page {
+  margin-top: 18px;
+  display: grid;
+  gap: 18px;
+}
+
+.aircraft-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.section-tag {
+  display: inline-flex;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--stroke);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--muted);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.aircraft-title {
+  margin: 10px 0 2px;
+  font-size: clamp(1.8rem, 5.5vw, 2.6rem);
+}
+
+.aircraft-model {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.chip-accent {
+  background: linear-gradient(120deg, rgba(232, 58, 63, 0.2), rgba(255, 122, 89, 0.15));
+  color: var(--ink);
+  border-color: rgba(232, 58, 63, 0.35);
+}
+
+.aircraft-panel {
+  background: var(--card);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--stroke);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.aircraft-image {
+  position: relative;
+  min-height: 210px;
+  padding: 18px;
+  display: grid;
+  align-content: end;
+  background: linear-gradient(135deg, rgba(9, 30, 45, 0.9), rgba(8, 12, 18, 0.7));
+}
+
+.aircraft-image::before {
+  content: "";
+  position: absolute;
+  inset: 12px 16px;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 520 180'><path fill='%23f2f5f7' fill-opacity='0.18' d='M10 120h300l140-40 50-5 10 12-50 18-30 30H10z'/><path fill='%23f2f5f7' fill-opacity='0.12' d='M210 86l80-14 60 8-90 30z'/><circle cx='380' cy='128' r='14' fill='%23f2f5f7' fill-opacity='0.25'/><circle cx='420' cy='128' r='14' fill='%23f2f5f7' fill-opacity='0.25'/></svg>") no-repeat center / contain;
+  opacity: 0.9;
+}
+
+.aircraft-strip {
+  position: absolute;
+  right: 18px;
+  top: 18px;
+  width: 60px;
+  height: 90px;
+  background: linear-gradient(160deg, #e83a3f, #ff7a59);
+  clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
+  opacity: 0.9;
+}
+
+.aircraft-label {
+  position: relative;
+  z-index: 1;
+  background: rgba(8, 14, 20, 0.65);
+  border: 1px solid var(--stroke);
+  border-radius: 14px;
+  padding: 12px 14px;
+  max-width: 220px;
+  display: grid;
+  gap: 6px;
+}
+
+.aircraft-label span {
+  color: var(--muted);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.aircraft-label small {
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+
+.spec-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  padding: 16px;
+}
+
+.spec-card {
+  background: var(--card-strong);
+  border: 1px solid var(--stroke);
+  border-radius: 14px;
+  padding: 12px;
+  display: grid;
+  gap: 6px;
+}
+
+.spec-card span {
+  color: var(--muted);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.cta-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
 .hero-intro {
   margin-top: 16px;
   display: grid;
@@ -800,3 +948,4 @@ section {
   }
 
 }
+
