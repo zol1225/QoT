@@ -38,61 +38,48 @@
           </div>
         </header>
 
-        <div class="status-row">
-          <span class="time">14:00</span>
-          <div class="status-right">
-            <div class="status-icons" aria-hidden="true">
-              <span></span><span></span><span></span>
-            </div>
-            <span class="status-text" data-i18n="status_text">MIAT inflight</span>
-          </div>
-        </div>
-
-        <section class="aircraft-page">
-          <div class="aircraft-head">
-            <div>
-              <span class="section-tag" data-i18n="aircraft_tag">Aircraft</span>
-              <h1 class="aircraft-title">Boeing</h1>
-              <p class="aircraft-model">777-300ER</p>
-            </div>
-            <button class="chip chip-accent" type="button" data-i18n="aircraft_overview">
-              Overview
-            </button>
-          </div>
-
-          <div class="aircraft-panel">
-            <div class="aircraft-image">
-              <div class="aircraft-strip"></div>
-              <div class="aircraft-label">
-                <span data-i18n="aircraft_engine_label">Engines</span>
-                <strong>Trent XWB-97</strong>
-                <small><span data-i18n="aircraft_manu_label">Manufacturer</span> · Rolls-Royce</small>
-              </div>
-            </div>
-
-            <div class="spec-grid">
-              <div class="spec-card">
-                <span data-i18n="spec_engines">Engines</span>
-                <strong>Trent XWB-97</strong>
-              </div>
-              <div class="spec-card">
-                <span data-i18n="spec_tyre">Tyre</span>
-                <strong>Diameter 1.3m</strong>
-              </div>
-              <div class="spec-card">
-                <span data-i18n="spec_range">Range</span>
-                <strong>13,650 km</strong>
-              </div>
-              <div class="spec-card">
-                <span data-i18n="spec_speed">Cruise</span>
-                <strong>905 km/h</strong>
-              </div>
+        <section class="hero">
+          <div class="hero-copy reveal delay-1">
+            <div class="badge"><span></span><span data-i18n="badge">Тавтай морил</span></div>
+            <h1>
+              <span data-i18n="hero_title_prefix">Mobiflight — тэнгэрт таны найз.</span>
+              <strong>VOO</strong>.
+            </h1>
+            <p data-i18n="hero_lead">
+              Аяллын цаг урт байж болно, харин уйтгартай байх албагүй.
+            </p>
+            <div class="hero-actions">
+              <a class="btn primary" href="voo.html" data-i18n="cta_voo">VOO нээх</a>
+              <a class="btn secondary" href="flight.html" data-i18n="cta_flight">Нислэгийн мэдээлэл</a>
             </div>
           </div>
 
-          <div class="cta-row">
-            <a class="btn primary" href="voo.html" data-i18n="cta_voo">Open VOO</a>
-            <a class="btn secondary" href="flight.html" data-i18n="cta_flight">Flight details</a>
+          <div class="flight-panel reveal delay-2">
+            <div class="flight-title">
+              <div>
+                <h3 data-i18n="flight_greeting">Нислэгийн товч</h3>
+                <small data-i18n="flight_aircraft">MIAT - Boeing 737-800</small>
+              </div>
+              <span class="flight-pill" data-i18n="seat_pill">Суудал 6E | Энгийн</span>
+            </div>
+            <div class="flight-grid">
+              <div class="flight-card">
+                <span data-i18n="label_flightno">Нислэгийн дугаар</span>
+                <strong>OM 921</strong>
+              </div>
+              <div class="flight-card">
+                <span data-i18n="label_eta">Ирэх цаг</span>
+                <strong>15:35</strong>
+              </div>
+              <div class="flight-card">
+                <span data-i18n="label_temp">Температур</span>
+                <strong>6 C</strong>
+              </div>
+              <div class="flight-card">
+                <span data-i18n="label_distance">Маршрут</span>
+                <strong>ULN - ICN</strong>
+              </div>
+            </div>
           </div>
         </section>
 
