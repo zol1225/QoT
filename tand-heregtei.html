@@ -1,9 +1,9 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>MIAT | Танд хэрэгтэй</title>
+    <title>MIAT | Ð¢Ð°Ð½Ð´ Ñ…ÑÑ€ÑÐ³Ñ‚ÑÐ¹</title>
     <meta name="description" content="MIAT helpful information." />
     <meta name="color-scheme" content="dark" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -35,13 +35,49 @@
 
           <a class="back-btn" href="index.html" data-i18n="back_home">Back</a>
 
-          <div class="lang-toggle" aria-label="Language selector">
+                    <div class="lang-toggle" aria-label="Language selector">
             <button class="active" type="button" data-lang="en">EN</button>
             <button type="button" data-lang="mn">MN</button>
+            <button class="disabled" type="button" disabled>JA</button>
+            <button class="disabled" type="button" disabled>KR</button>
           </div>
         </header>
 
-        <main class="blank-shell"></main>
+        <main class="help-shell">
+          <div class="help-head">
+            <h1 data-i18n="help_title">Ð¢Ð°Ð½Ð´ Ñ…ÑÑ€ÑÐ³Ñ‚ÑÐ¹</h1>
+            <p data-i18n="help_lead">
+              ÐÑÐ»Ð»Ñ‹Ð½ Ò¯ÐµÑÑ€ Ñ…ÑÑ€ÑÐ³Ñ‚ÑÐ¹ Ò¯Ð¹Ð»Ñ‡Ð¸Ð»Ð³ÑÑ, ÑÐ°Ð½Ð°Ð» Ð±Ð¾Ð»Ð¾Ð½ Ñ‚ÑƒÑÐ»Ð°Ð¼Ð¶Ð¸Ð¹Ð½ Ñ‚Ð¾Ð²Ñ‡Ð»ÑƒÑƒÑ€ÑƒÑƒÐ´.
+            </p>
+          </div>
+
+          <div class="help-grid">
+            <div class="help-card">
+              <h3 data-i18n="help_mobilife_title">MobiLife</h3>
+              <p data-i18n="help_mobilife_desc">ÐÑÐ»Ð»Ñ‹Ð½ Ð´Ð°Ð°Ñ‚Ð³Ð°Ð»Ñ‹Ð½ ÑˆÐ¸Ð¹Ð´ÑÐ».</p>
+              <div class="help-actions">
+                <a class="btn primary" href="https://mobilife.mn" target="_blank" rel="noreferrer" data-i18n="help_cta_open">ÐÑÑÑ…</a>
+              </div>
+            </div>
+
+            <div class="help-card">
+              <h3 data-i18n="help_esim_title">eSIM</h3>
+              <p data-i18n="help_esim_desc">Ð“Ð°Ð´Ð°Ð°Ð´Ð°Ð´ Ð´Ð°Ñ‚Ð° Ð°ÑˆÐ¸Ð³Ð»Ð°Ñ… Ñ…ÑƒÑ€Ð´Ð°Ð½ ÑˆÐ¸Ð¹Ð´ÑÐ».</p>
+              <div class="help-actions">
+                <a class="btn primary" href="https://travelsim.mn" target="_blank" rel="noreferrer" data-i18n="help_cta_open">ÐÑÑÑ…</a>
+              </div>
+            </div>
+
+            <div class="help-card">
+              <h3 data-i18n="help_skyshop_title">Sky Shop</h3>
+              <p data-i18n="help_skyshop_desc">ÐžÐ½Ð³Ð¾Ñ†Ð½Ñ‹ Ð¾Ð½Ñ†Ð³Ð¾Ð¹ Ð±Ò¯Ñ‚ÑÑÐ³Ð´ÑÑ…Ò¯Ò¯Ð½, Ò¯Ð½Ñ Ð¼ÑÐ´ÑÑÐ»ÑÐ».</p>
+              <div class="help-actions">
+                <button class="btn secondary" type="button" data-i18n="help_cta_soon">Ð£Ð´Ð°Ñ…Ð³Ò¯Ð¹</button>
+              </div>
+            </div>
+
+          </div>
+        </main>
 
         <div class="footer"></div>
       </div>
@@ -50,3 +86,4 @@
     <script src="app.js"></script>
   </body>
 </html>
+

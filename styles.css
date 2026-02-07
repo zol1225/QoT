@@ -26,9 +26,9 @@ body {
   font-family: "Sora", "Segoe UI", sans-serif;
   color: var(--ink);
   line-height: 1.5;
-  background: url("background.png") center 20% / cover no-repeat, #0b0f14;
-  background-size: cover;
-  background-position: center 20%;
+  background: url("background.png") center center / 100% 100% no-repeat, #0b0f14;
+  background-size: 100% 100%;
+  background-position: center center;
   background-repeat: no-repeat;
   min-height: 100vh;
 }
@@ -73,7 +73,7 @@ a {
   margin-left: calc(-1 * var(--page-pad));
   padding: 12px var(--page-pad);
   background: rgba(11, 15, 20, 0.82);
-  backdrop-filter: blur(14px);
+  backdrop-filter: none;
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 
@@ -107,7 +107,7 @@ a {
   border-radius: 28px;
   background: rgba(9, 14, 20, 0.58);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(18px);
+  backdrop-filter: none;
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
 }
 
@@ -313,6 +313,71 @@ a {
 
 .blank-shell {
   min-height: calc(100vh - 120px);
+}
+
+.help-shell {
+  max-width: 720px;
+  margin: 18px auto 0;
+  padding: 28px 18px 40px;
+}
+
+.help-head h1 {
+  margin: 0 0 8px;
+  font-size: clamp(1.6rem, 4.6vw, 2.2rem);
+  text-shadow: 0 16px 30px rgba(0, 0, 0, 0.45);
+}
+
+.help-head p {
+  margin: 0 0 20px;
+  color: var(--muted);
+  text-shadow: 0 12px 24px rgba(0, 0, 0, 0.45);
+}
+
+.help-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.help-card {
+  background: rgba(8, 12, 16, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  padding: 14px;
+  display: grid;
+  gap: 8px;
+  text-align: center;
+  place-items: center;
+}
+
+.help-card h3 {
+  margin: 0;
+  font-size: 1rem;
+  text-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.help-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+  text-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.help-actions {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  margin-top: 6px;
+}
+
+.help-actions .btn {
+  width: 100%;
+}
+
+@media (max-width: 720px) {
+  .help-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .brand {
@@ -736,7 +801,7 @@ a {
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid var(--stroke);
   border-radius: 999px;
-  backdrop-filter: blur(12px);
+  backdrop-filter: none;
 }
 
 .lang-toggle button {
@@ -747,6 +812,12 @@ a {
   border-radius: 999px;
   font-weight: 600;
   cursor: pointer;
+}
+
+.lang-toggle button.disabled,
+.lang-toggle button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
 }
 
 .lang-toggle button.active {
@@ -765,7 +836,7 @@ a {
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 22px;
   padding: 20px 20px 22px;
-  backdrop-filter: blur(10px);
+  backdrop-filter: none;
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
   max-width: 560px;
 }
@@ -850,7 +921,7 @@ a {
   border-radius: var(--radius-md);
   padding: 12px 14px;
   border: 1px solid var(--stroke);
-  backdrop-filter: blur(16px);
+  backdrop-filter: none;
   color: var(--muted);
   font-weight: 600;
 }
@@ -862,7 +933,7 @@ a {
   padding: 18px;
   border: 1px solid var(--stroke);
   box-shadow: var(--shadow);
-  backdrop-filter: blur(18px);
+  backdrop-filter: none;
 }
 
 .flight-panel::after {
@@ -992,7 +1063,7 @@ section {
   padding: 16px;
   border: 1px solid var(--stroke);
   box-shadow: var(--shadow);
-  backdrop-filter: blur(16px);
+  backdrop-filter: none;
   display: grid;
   gap: 10px;
 }
@@ -1213,5 +1284,6 @@ section {
   }
 
 }
+
 
 
