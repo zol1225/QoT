@@ -14,6 +14,7 @@
   --radius-lg: 22px;
   --radius-md: 16px;
   --radius-sm: 12px;
+  --page-pad: clamp(16px, 4vw, 56px);
 }
 
 * {
@@ -77,7 +78,7 @@ a {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 24px clamp(16px, 4vw, 56px) 120px;
+  padding: 24px var(--page-pad) 120px;
   position: relative;
   z-index: 1;
 }
@@ -90,7 +91,9 @@ a {
   position: sticky;
   top: 0;
   z-index: 20;
-  padding: 12px 0;
+  padding: 12px var(--page-pad);
+  margin-left: calc(-1 * var(--page-pad));
+  margin-right: calc(-1 * var(--page-pad));
   background: rgba(11, 15, 20, 0.85);
   backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--stroke);
