@@ -3,11 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>VOO Inflight | Home</title>
-    <meta
-      name="description"
-      content="VOO inflight demo landing page for MIAT passengers."
-    />
+    <title>VOO Inflight | Flight</title>
+    <meta name="description" content="VOO inflight flight information." />
     <meta name="color-scheme" content="dark" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -89,53 +86,47 @@
           </div>
 
           <div class="hero-copy reveal delay-2">
-            <div class="badge"><span></span><span data-i18n="badge">Welcome to MIAT</span></div>
+            <div class="badge"><span></span><span data-i18n="section_flight_title">Flight info</span></div>
             <h1>
-              <span data-i18n="hero_title_prefix">Discover Mongolia above the clouds with</span>
-              <strong>VOO</strong>.
+              <span data-i18n="section_flight_sub">Live status and cabin details</span>
             </h1>
-            <p data-i18n="hero_lead">
-              Scan the QR, connect instantly, and enjoy your inflight companion.
-              Flight info, eSIM, sponsored video, and VOO streaming in one place.
-            </p>
+            <p data-i18n="flight_status_desc">On time with smooth skies over Mongolia.</p>
             <div class="hero-actions">
               <a class="btn primary" href="voo.html" data-i18n="cta_voo">Open VOO</a>
-              <a class="btn secondary" href="flight.html" data-i18n="cta_flight"
-                >View Flight Info</a>
-            </div>
-            <div class="hero-tags">
-              <div class="tag" data-i18n="tag_qr">QR onboarding in seconds</div>
-              <div class="tag" data-i18n="tag_lang">MN and EN ready</div>
-              <div class="tag" data-i18n="tag_server">Onboard content server</div>
+              <a class="btn secondary" href="index.html" data-i18n="nav_home">Home</a>
             </div>
           </div>
         </section>
 
         <section>
           <div class="section-title">
-            <h2 data-i18n="quick_title">Quick access</h2>
-            <span data-i18n="quick_sub">Everything from one screen</span>
+            <h2 data-i18n="section_flight_title">Flight info</h2>
+            <span data-i18n="section_flight_sub">Live status and cabin details</span>
           </div>
           <div class="cards">
             <div class="card reveal delay-1">
-              <h3 data-i18n="quick_flight">Flight info</h3>
-              <p data-i18n="quick_flight_desc">Live status, altitude, ETA</p>
-              <a class="pill accent" href="flight.html" data-i18n="quick_flight_tag">ULN -> ICN</a>
+              <h3 data-i18n="flight_status_title">Status</h3>
+              <p data-i18n="flight_status_desc">On time with smooth skies over Mongolia.</p>
+              <div class="list">
+                <span class="pill accent" data-i18n="flight_status_route">ULN -> ICN</span>
+                <span class="pill gold" data-i18n="flight_status_alt">Altitude 35,500 ft</span>
+              </div>
             </div>
             <div class="card reveal delay-2">
-              <h3 data-i18n="quick_esim">eSIM offers</h3>
-              <p data-i18n="quick_esim_desc">Stay connected after landing</p>
-              <a class="pill gold" href="esim.html" data-i18n="quick_esim_tag">3GB - 5 days</a>
+              <h3 data-i18n="flight_cabin_title">Cabin services</h3>
+              <div class="list">
+                <span data-i18n="flight_cabin_meals">Meals: service in 20 minutes</span>
+                <span data-i18n="flight_cabin_power">Seat power: rows 10-30</span>
+                <span data-i18n="flight_cabin_support">Support: call cabin crew via seat panel</span>
+              </div>
             </div>
             <div class="card reveal delay-3">
-              <h3 data-i18n="quick_video">Sponsored video</h3>
-              <p data-i18n="quick_video_desc">Partner highlight reel</p>
-              <a class="pill" href="video.html" data-i18n="quick_video_tag">Now playing</a>
-            </div>
-            <div class="card reveal delay-4">
-              <h3 data-i18n="quick_voo">VOO streaming</h3>
-              <p data-i18n="quick_voo_desc">Movies, music, originals</p>
-              <a class="btn primary" href="voo.html" data-i18n="quick_voo_cta">Launch VOO</a>
+              <h3 data-i18n="flight_weather_title">Destination weather</h3>
+              <p data-i18n="flight_weather_desc">Clear skies expected at arrival.</p>
+              <div class="list">
+                <span data-i18n="flight_weather_wind">Wind: light breeze</span>
+                <span data-i18n="flight_weather_temp">Temperature: 6 C</span>
+              </div>
             </div>
           </div>
         </section>
