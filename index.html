@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -25,10 +25,10 @@
         --accent-2: #f2b84b;
         --accent-3: #79d6ff;
         --card: rgba(16, 24, 34, 0.72);
-        --card-strong: rgba(12, 20, 28, 0.9);
+        --card-strong: rgba(12, 20, 28, 0.92);
         --stroke: rgba(255, 255, 255, 0.08);
         --shadow: 0 30px 80px rgba(0, 0, 0, 0.55);
-        --radius-xl: 32px;
+        --radius-xl: 30px;
         --radius-lg: 22px;
         --radius-md: 16px;
         --radius-sm: 12px;
@@ -95,7 +95,7 @@
       .container {
         max-width: 1200px;
         margin: 0 auto;
-        padding: 28px clamp(18px, 4vw, 56px) 96px;
+        padding: 24px clamp(16px, 4vw, 56px) 120px;
         position: relative;
         z-index: 1;
       }
@@ -110,13 +110,13 @@
       .brand {
         display: flex;
         align-items: center;
-        gap: 14px;
+        gap: 12px;
         font-weight: 600;
       }
 
       .brand-mark {
-        width: 46px;
-        height: 46px;
+        width: 44px;
+        height: 44px;
         border-radius: 14px;
         background: conic-gradient(
           from 120deg,
@@ -144,30 +144,7 @@
       }
 
       .nav {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        flex-wrap: wrap;
-        font-size: 0.95rem;
-        color: var(--muted);
-      }
-
-      .nav a {
-        padding: 8px 12px;
-        border-radius: 999px;
-        transition: all 0.2s ease;
-      }
-
-      .nav a:hover {
-        color: var(--ink);
-        background: rgba(255, 255, 255, 0.08);
-      }
-
-      .nav a.cta {
-        background: linear-gradient(120deg, #00c2c7, #2b9cff);
-        color: #041217;
-        font-weight: 700;
-        box-shadow: 0 18px 40px rgba(0, 194, 199, 0.35);
+        display: none;
       }
 
       .lang-toggle {
@@ -197,10 +174,24 @@
 
       .hero {
         display: grid;
-        grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
-        gap: clamp(24px, 4vw, 56px);
-        align-items: center;
-        padding: 50px 0 32px;
+        gap: 24px;
+        padding: 32px 0 12px;
+      }
+
+      .hero-copy h1 {
+        font-size: clamp(2.1rem, 4.4vw, 3.6rem);
+        line-height: 1.1;
+        margin: 18px 0 12px;
+      }
+
+      .hero-copy h1 strong {
+        color: var(--accent);
+      }
+
+      .hero-copy p {
+        color: var(--muted);
+        max-width: 520px;
+        font-size: 1.02rem;
       }
 
       .badge {
@@ -223,33 +214,17 @@
         box-shadow: 0 0 12px rgba(242, 184, 75, 0.8);
       }
 
-      .hero h1 {
-        font-size: clamp(2.4rem, 4.5vw, 4rem);
-        line-height: 1.08;
-        margin: 18px 0 12px;
-      }
-
-      .hero h1 strong {
-        color: var(--accent);
-      }
-
-      .hero p {
-        color: var(--muted);
-        max-width: 520px;
-        font-size: 1.05rem;
-      }
-
       .hero-actions {
-        display: flex;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: 1fr;
         gap: 12px;
-        margin-top: 22px;
+        margin-top: 20px;
       }
 
       .btn {
         border: none;
         border-radius: 999px;
-        padding: 12px 22px;
+        padding: 12px 20px;
         font-weight: 600;
         cursor: pointer;
         font-size: 0.95rem;
@@ -270,14 +245,13 @@
       .hero-tags {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-        gap: 12px;
-        margin-top: 26px;
+        gap: 10px;
+        margin-top: 18px;
       }
-
       .tag {
         background: var(--card);
         border-radius: var(--radius-md);
-        padding: 14px 16px;
+        padding: 12px 14px;
         border: 1px solid var(--stroke);
         backdrop-filter: blur(16px);
         color: var(--muted);
@@ -288,19 +262,18 @@
         position: relative;
         background: var(--card);
         border-radius: var(--radius-xl);
-        padding: 24px;
+        padding: 20px;
         border: 1px solid var(--stroke);
         box-shadow: var(--shadow);
         backdrop-filter: blur(18px);
-        transform: rotate(-1deg);
       }
 
       .flight-panel::after {
         content: "";
         position: absolute;
-        inset: 12px;
-        border-radius: calc(var(--radius-xl) - 12px);
-        border: 1px solid rgba(255, 255, 255, 0.06);
+        inset: 10px;
+        border-radius: calc(var(--radius-xl) - 10px);
+        border: 1px solid rgba(255, 255, 255, 0.05);
         pointer-events: none;
       }
 
@@ -308,12 +281,12 @@
         display: flex;
         justify-content: space-between;
         align-items: start;
-        gap: 16px;
+        gap: 12px;
       }
 
       .flight-title h3 {
         margin: 0;
-        font-size: 1.25rem;
+        font-size: 1.2rem;
       }
 
       .flight-title small {
@@ -333,14 +306,14 @@
       .flight-grid {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 12px;
-        margin-top: 18px;
+        gap: 10px;
+        margin-top: 16px;
       }
 
       .flight-card {
         background: var(--card-strong);
         border-radius: var(--radius-md);
-        padding: 12px 14px;
+        padding: 10px 12px;
         border: 1px solid var(--stroke);
         font-size: 0.9rem;
         display: grid;
@@ -349,13 +322,13 @@
 
       .flight-card span {
         color: var(--muted);
-        font-size: 0.75rem;
+        font-size: 0.72rem;
         letter-spacing: 0.08em;
         text-transform: uppercase;
       }
 
       .route-line {
-        margin-top: 18px;
+        margin-top: 16px;
         display: grid;
         gap: 10px;
       }
@@ -384,7 +357,7 @@
       }
 
       section {
-        margin-top: 56px;
+        margin-top: 48px;
       }
 
       .section-title {
@@ -396,7 +369,7 @@
 
       .section-title h2 {
         margin: 0;
-        font-size: clamp(1.5rem, 3vw, 2rem);
+        font-size: clamp(1.4rem, 3vw, 1.9rem);
       }
 
       .section-title span {
@@ -406,25 +379,25 @@
 
       .cards {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 18px;
-        margin-top: 18px;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 16px;
+        margin-top: 16px;
       }
 
       .card {
         background: var(--card);
         border-radius: var(--radius-lg);
-        padding: 20px;
+        padding: 18px;
         border: 1px solid var(--stroke);
         box-shadow: var(--shadow);
         backdrop-filter: blur(16px);
         display: grid;
-        gap: 12px;
+        gap: 10px;
       }
 
       .card h3 {
         margin: 0;
-        font-size: 1.15rem;
+        font-size: 1.1rem;
       }
 
       .card p {
@@ -463,16 +436,16 @@
         background: linear-gradient(135deg, #0c121a, #122d3a);
         border-radius: var(--radius-lg);
         border: 1px solid var(--stroke);
-        padding: 22px;
-        min-height: 200px;
+        padding: 20px;
+        min-height: 190px;
         display: grid;
         align-content: space-between;
         color: #eaf6ff;
       }
 
       .video-card .play {
-        width: 56px;
-        height: 56px;
+        width: 52px;
+        height: 52px;
         border-radius: 50%;
         border: 2px solid #eaf6ff;
         display: grid;
@@ -491,25 +464,57 @@
       }
 
       .voo-spotlight {
-        background: linear-gradient(120deg, rgba(0, 194, 199, 0.2), rgba(43, 156, 255, 0.15));
+        background: linear-gradient(
+          120deg,
+          rgba(0, 194, 199, 0.22),
+          rgba(43, 156, 255, 0.18)
+        );
         border-radius: var(--radius-xl);
-        padding: 28px;
+        padding: 24px;
         border: 1px solid rgba(0, 194, 199, 0.4);
         display: grid;
-        gap: 16px;
+        gap: 14px;
       }
 
       .voo-spotlight h3 {
         margin: 0;
-        font-size: 1.6rem;
+        font-size: 1.45rem;
       }
 
       .voo-spotlight strong {
         color: var(--accent);
       }
 
+      .bottom-nav {
+        position: fixed;
+        left: 50%;
+        bottom: 16px;
+        transform: translateX(-50%);
+        background: rgba(8, 12, 18, 0.78);
+        border: 1px solid var(--stroke);
+        padding: 8px 12px;
+        border-radius: 999px;
+        display: flex;
+        gap: 6px;
+        z-index: 10;
+        backdrop-filter: blur(16px);
+      }
+
+      .bottom-nav a {
+        padding: 8px 12px;
+        border-radius: 999px;
+        color: var(--muted);
+        font-weight: 600;
+        font-size: 0.85rem;
+      }
+
+      .bottom-nav a.voo {
+        background: linear-gradient(120deg, #00c2c7, #2b9cff);
+        color: #041217;
+      }
+
       .footer {
-        margin-top: 80px;
+        margin-top: 70px;
         display: flex;
         flex-wrap: wrap;
         gap: 12px;
@@ -544,38 +549,57 @@
         }
       }
 
-      @media (max-width: 980px) {
-        .topbar {
-          grid-template-columns: 1fr;
-          justify-items: start;
-        }
-
-        .hero {
-          grid-template-columns: 1fr;
-        }
-      }
-
-      @media (max-width: 640px) {
+      @media (min-width: 920px) {
         .nav {
-          gap: 6px;
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          flex-wrap: wrap;
+          font-size: 0.95rem;
+          color: var(--muted);
         }
 
         .nav a {
-          padding: 6px 10px;
+          padding: 8px 12px;
+          border-radius: 999px;
+          transition: all 0.2s ease;
+        }
+
+        .nav a:hover {
+          color: var(--ink);
+          background: rgba(255, 255, 255, 0.08);
+        }
+
+        .nav a.cta {
+          background: linear-gradient(120deg, #00c2c7, #2b9cff);
+          color: #041217;
+          font-weight: 700;
+          box-shadow: 0 18px 40px rgba(0, 194, 199, 0.35);
+        }
+
+        .hero {
+          grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+          align-items: center;
+          padding: 56px 0 22px;
         }
 
         .hero-actions {
-          flex-direction: column;
-          align-items: stretch;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          max-width: 420px;
+        }
+
+        .bottom-nav {
+          display: none;
+        }
+      }
+
+      @media (max-width: 560px) {
+        .topbar {
+          grid-template-columns: 1fr auto;
         }
 
         .lang-toggle {
-          width: 100%;
-          justify-content: space-between;
-        }
-
-        .flight-grid {
-          grid-template-columns: 1fr;
+          justify-self: end;
         }
       }
     </style>
@@ -587,122 +611,161 @@
           <div class="brand">
             <div class="brand-mark"></div>
             <div class="brand-text">
-              <span>VOO Inflight</span>
-              <span>MIAT demo</span>
+              <span data-i18n="brand_title">VOO Inflight</span>
+              <span data-i18n="brand_sub">MIAT demo</span>
             </div>
           </div>
 
           <nav class="nav">
-            <a href="#welcome">Welcome</a>
-            <a href="#flight">Flight info</a>
-            <a href="#esim">eSIM</a>
-            <a href="#video">Sponsored</a>
-            <a class="cta" href="#voo">VOO</a>
+            <a href="#home" data-i18n="nav_home">Home</a>
+            <a href="#flight" data-i18n="nav_flight">Flight</a>
+            <a href="#esim" data-i18n="nav_esim">eSIM</a>
+            <a href="#video" data-i18n="nav_video">Sponsored</a>
+            <a class="cta" href="#voo" data-i18n="nav_voo">VOO</a>
           </nav>
 
           <div class="lang-toggle" aria-label="Language selector">
-            <button class="active" type="button">EN</button>
-            <button type="button">MN</button>
+            <button class="active" type="button" data-lang="en">EN</button>
+            <button type="button" data-lang="mn">MN</button>
           </div>
         </header>
-
-        <section id="welcome" class="hero">
-          <div class="reveal delay-1">
-            <div class="badge"><span></span>Welcome to MIAT</div>
-            <h1>
-              Discover Mongolia above the clouds with <strong>VOO</strong>.
-            </h1>
-            <p>
-              Scan the QR, connect instantly, and enjoy your inflight companion.
-              This demo highlights flight info, eSIM offers, sponsored video, and
-              VOO streaming in one touch.
-            </p>
-            <div class="hero-actions">
-              <a class="btn primary" href="https://voo.mn" target="_blank" rel="noreferrer"
-                >Open VOO</a
-              >
-              <a class="btn secondary" href="#flight">View Flight Info</a>
-            </div>
-            <div class="hero-tags">
-              <div class="tag">QR onboarding in seconds</div>
-              <div class="tag">MN and EN ready</div>
-              <div class="tag">Onboard content server</div>
-            </div>
-          </div>
-
-          <div class="flight-panel reveal delay-2">
+        <section id="home" class="hero">
+          <div class="flight-panel reveal delay-1">
             <div class="flight-title">
               <div>
-                <h3>Enjoy your flight, guest</h3>
-                <small>MIAT - Boeing 737-800</small>
+                <h3 data-i18n="flight_greeting">Enjoy your flight, guest</h3>
+                <small data-i18n="flight_aircraft">MIAT - Boeing 737-800</small>
               </div>
-              <span class="flight-pill">Seat 6E | Economy</span>
+              <span class="flight-pill" data-i18n="seat_pill">Seat 6E | Economy</span>
             </div>
             <div class="flight-grid">
               <div class="flight-card">
-                <span>Altitude</span>
+                <span data-i18n="label_altitude">Altitude</span>
                 <strong>35,500 ft</strong>
               </div>
               <div class="flight-card">
-                <span>Flight number</span>
+                <span data-i18n="label_flightno">Flight number</span>
                 <strong>OM 921</strong>
               </div>
               <div class="flight-card">
-                <span>Temperature</span>
+                <span data-i18n="label_temp">Temperature</span>
                 <strong>6 C</strong>
               </div>
               <div class="flight-card">
-                <span>Ground speed</span>
+                <span data-i18n="label_speed">Ground speed</span>
                 <strong>820 km/h</strong>
               </div>
               <div class="flight-card">
-                <span>Distance</span>
+                <span data-i18n="label_distance">Distance</span>
                 <strong>1,920 km</strong>
               </div>
               <div class="flight-card">
-                <span>ETA</span>
+                <span data-i18n="label_eta">ETA</span>
                 <strong>15:35</strong>
               </div>
             </div>
             <div class="route-line">
               <div class="route-bar"><span></span></div>
               <div class="route-meta">
-                <span>ULN 14:10</span>
-                <span>1h 10m remaining</span>
-                <span>ICN 15:35</span>
+                <span data-i18n="route_start">ULN 14:10</span>
+                <span data-i18n="route_mid">1h 10m remaining</span>
+                <span data-i18n="route_end">ICN 15:35</span>
               </div>
+            </div>
+          </div>
+
+          <div class="hero-copy reveal delay-2">
+            <div class="badge"><span></span><span data-i18n="badge">Welcome to MIAT</span></div>
+            <h1>
+              <span data-i18n="hero_title_prefix">Discover Mongolia above the clouds with</span>
+              <strong>VOO</strong>.
+            </h1>
+            <p data-i18n="hero_lead">
+              Scan the QR, connect instantly, and enjoy your inflight companion.
+              Flight info, eSIM, sponsored video, and VOO streaming in one place.
+            </p>
+            <div class="hero-actions">
+              <a
+                class="btn primary"
+                href="https://voo.mn"
+                target="_blank"
+                rel="noreferrer"
+                data-i18n="cta_voo"
+                >Open VOO</a>
+              <a class="btn secondary" href="#flight" data-i18n="cta_flight"
+                >View Flight Info</a>
+            </div>
+            <div class="hero-tags">
+              <div class="tag" data-i18n="tag_qr">QR onboarding in seconds</div>
+              <div class="tag" data-i18n="tag_lang">MN and EN ready</div>
+              <div class="tag" data-i18n="tag_server">Onboard content server</div>
+            </div>
+          </div>
+        </section>
+
+        <section id="quick">
+          <div class="section-title">
+            <h2 data-i18n="quick_title">Quick access</h2>
+            <span data-i18n="quick_sub">Everything from one screen</span>
+          </div>
+          <div class="cards">
+            <div class="card reveal delay-1">
+              <h3 data-i18n="quick_flight">Flight info</h3>
+              <p data-i18n="quick_flight_desc">Live status, altitude, ETA</p>
+              <span class="pill accent" data-i18n="quick_flight_tag">ULN -> ICN</span>
+            </div>
+            <div class="card reveal delay-2">
+              <h3 data-i18n="quick_esim">eSIM offers</h3>
+              <p data-i18n="quick_esim_desc">Stay connected after landing</p>
+              <span class="pill gold" data-i18n="quick_esim_tag">3GB - 5 days</span>
+            </div>
+            <div class="card reveal delay-3">
+              <h3 data-i18n="quick_video">Sponsored video</h3>
+              <p data-i18n="quick_video_desc">Partner highlight reel</p>
+              <span class="pill" data-i18n="quick_video_tag">Now playing</span>
+            </div>
+            <div class="card reveal delay-4">
+              <h3 data-i18n="quick_voo">VOO streaming</h3>
+              <p data-i18n="quick_voo_desc">Movies, music, originals</p>
+              <a
+                class="btn primary"
+                href="https://voo.mn"
+                target="_blank"
+                rel="noreferrer"
+                data-i18n="quick_voo_cta"
+                >Launch VOO</a>
             </div>
           </div>
         </section>
 
         <section id="flight">
           <div class="section-title">
-            <h2>Flight info</h2>
-            <span>Live status and cabin details</span>
+            <h2 data-i18n="section_flight_title">Flight info</h2>
+            <span data-i18n="section_flight_sub">Live status and cabin details</span>
           </div>
           <div class="cards">
             <div class="card reveal delay-1">
-              <h3>Status</h3>
-              <p>On time with smooth skies over Mongolia.</p>
+              <h3 data-i18n="flight_status_title">Status</h3>
+              <p data-i18n="flight_status_desc">On time with smooth skies over Mongolia.</p>
               <div class="list">
-                <span class="pill accent">ULN -> ICN</span>
-                <span class="pill gold">Altitude 35,500 ft</span>
+                <span class="pill accent" data-i18n="flight_status_route">ULN -> ICN</span>
+                <span class="pill gold" data-i18n="flight_status_alt">Altitude 35,500 ft</span>
               </div>
             </div>
             <div class="card reveal delay-2">
-              <h3>Cabin services</h3>
+              <h3 data-i18n="flight_cabin_title">Cabin services</h3>
               <div class="list">
-                <span>Meals: service in 20 minutes</span>
-                <span>Seat power: rows 10-30</span>
-                <span>Support: call cabin crew via seat panel</span>
+                <span data-i18n="flight_cabin_meals">Meals: service in 20 minutes</span>
+                <span data-i18n="flight_cabin_power">Seat power: rows 10-30</span>
+                <span data-i18n="flight_cabin_support">Support: call cabin crew via seat panel</span>
               </div>
             </div>
             <div class="card reveal delay-3">
-              <h3>Destination weather</h3>
-              <p>Clear skies expected at arrival.</p>
+              <h3 data-i18n="flight_weather_title">Destination weather</h3>
+              <p data-i18n="flight_weather_desc">Clear skies expected at arrival.</p>
               <div class="list">
-                <span>Wind: light breeze</span>
-                <span>Temperature: 6 C</span>
+                <span data-i18n="flight_weather_wind">Wind: light breeze</span>
+                <span data-i18n="flight_weather_temp">Temperature: 6 C</span>
               </div>
             </div>
           </div>
@@ -710,65 +773,67 @@
 
         <section id="esim">
           <div class="section-title">
-            <h2>eSIM offers</h2>
-            <span>Stay connected after landing</span>
+            <h2 data-i18n="section_esim_title">eSIM offers</h2>
+            <span data-i18n="section_esim_sub">Stay connected after landing</span>
           </div>
           <div class="cards">
             <div class="card reveal delay-1">
-              <h3>How it works</h3>
+              <h3 data-i18n="esim_how_title">How it works</h3>
               <div class="list">
-                <span>1. Pick your region and data size</span>
-                <span>2. Pay securely in flight</span>
-                <span>3. Activate on arrival</span>
+                <span data-i18n="esim_how_1">1. Pick your region and data size</span>
+                <span data-i18n="esim_how_2">2. Pay securely in flight</span>
+                <span data-i18n="esim_how_3">3. Activate on arrival</span>
               </div>
             </div>
             <div class="card reveal delay-2">
-              <h3>Recommended plans</h3>
+              <h3 data-i18n="esim_plans_title">Recommended plans</h3>
               <div class="list">
-                <span>East Asia: 3GB - 5 days</span>
-                <span>Global: 8GB - 20 days</span>
-                <span>Premium: 15GB - 30 days</span>
+                <span data-i18n="esim_plan_1">East Asia: 3GB - 5 days</span>
+                <span data-i18n="esim_plan_2">Global: 8GB - 20 days</span>
+                <span data-i18n="esim_plan_3">Premium: 15GB - 30 days</span>
               </div>
             </div>
             <div class="card reveal delay-3">
-              <h3>Support</h3>
-              <p>Scan the QR on your seat pocket for step by step setup.</p>
-              <div class="pill accent">24/7 chat in VOO</div>
+              <h3 data-i18n="esim_support_title">Support</h3>
+              <p data-i18n="esim_support_desc">Scan the QR on your seat pocket for step by step setup.</p>
+              <div class="pill accent" data-i18n="esim_support_tag">24/7 chat in VOO</div>
             </div>
           </div>
         </section>
-
         <section id="video">
           <div class="section-title">
-            <h2>Sponsored video</h2>
-            <span>Partner highlight reel</span>
+            <h2 data-i18n="section_video_title">Sponsored video</h2>
+            <span data-i18n="section_video_sub">Partner highlight reel</span>
           </div>
           <div class="cards">
             <div class="video-card reveal delay-1">
               <div>
-                <strong>Discover Mongolia</strong>
-                <p>Short film featuring the steppe, sky, and city lights.</p>
+                <strong data-i18n="video_title">Discover Mongolia</strong>
+                <p data-i18n="video_desc">Short film featuring the steppe, sky, and city lights.</p>
               </div>
               <div class="play" aria-hidden="true"></div>
-              <small>Demo only - full playback onboard.</small>
+              <small data-i18n="video_note">Demo only - full playback onboard.</small>
             </div>
             <div class="card reveal delay-2">
-              <h3>Featured partner</h3>
-              <p>Route specific brand stories with QR follow ups.</p>
-              <div class="pill">Sponsored</div>
+              <h3 data-i18n="video_partner_title">Featured partner</h3>
+              <p data-i18n="video_partner_desc">Route specific brand stories with QR follow ups.</p>
+              <div class="pill" data-i18n="video_partner_tag">Sponsored</div>
             </div>
           </div>
         </section>
 
         <section id="voo">
           <div class="section-title">
-            <h2>VOO access</h2>
-            <span>Main experience for passengers</span>
+            <h2 data-i18n="section_voo_title">VOO access</h2>
+            <span data-i18n="section_voo_sub">Main experience for passengers</span>
           </div>
           <div class="cards">
             <div class="voo-spotlight reveal delay-1">
-              <h3>Make the cabin feel like cinema with <strong>VOO</strong>.</h3>
-              <p>
+              <h3>
+                <span data-i18n="voo_title_prefix">Make the cabin feel like cinema with</span>
+                <strong>VOO</strong>.
+              </h3>
+              <p data-i18n="voo_desc">
                 This demo redirects to the public VOO site. In flight, the VOO tab
                 opens the onboard content server with movies, series, music, and
                 originals.
@@ -779,27 +844,248 @@
                   href="https://voo.mn"
                   target="_blank"
                   rel="noreferrer"
-                  >Launch VOO</a
-                >
-                <a class="btn secondary" href="#flight">Back to Flight</a>
+                  data-i18n="voo_cta"
+                  >Launch VOO</a>
+                <a class="btn secondary" href="#flight" data-i18n="voo_back"
+                  >Back to Flight</a>
               </div>
             </div>
             <div class="card reveal delay-2">
-              <h3>What is inside VOO</h3>
+              <h3 data-i18n="voo_inside_title">What is inside VOO</h3>
               <div class="list">
-                <span>Originals, films, and series</span>
-                <span>Mongolian music and audio</span>
-                <span>Kids content and safe mode</span>
+                <span data-i18n="voo_inside_1">Originals, films, and series</span>
+                <span data-i18n="voo_inside_2">Mongolian music and audio</span>
+                <span data-i18n="voo_inside_3">Kids content and safe mode</span>
               </div>
             </div>
           </div>
         </section>
 
         <div class="footer">
-          <span>Powered by VOO - MIAT inflight demo</span>
-          <span>Need help? Ask the cabin crew.</span>
+          <span data-i18n="footer_left">Powered by VOO - MIAT inflight demo</span>
+          <span data-i18n="footer_right">Need help? Ask the cabin crew.</span>
         </div>
       </div>
+
+      <nav class="bottom-nav" aria-label="Quick navigation">
+        <a href="#home" data-i18n="nav_home">Home</a>
+        <a href="#flight" data-i18n="nav_flight">Flight</a>
+        <a href="#esim" data-i18n="nav_esim">eSIM</a>
+        <a href="#video" data-i18n="nav_video">Sponsored</a>
+        <a class="voo" href="#voo" data-i18n="nav_voo">VOO</a>
+      </nav>
     </div>
+
+    <script>
+      const translations = {
+        en: {
+          brand_title: "VOO Inflight",
+          brand_sub: "MIAT demo",
+          nav_home: "Home",
+          nav_flight: "Flight",
+          nav_esim: "eSIM",
+          nav_video: "Sponsored",
+          nav_voo: "VOO",
+          badge: "Welcome to MIAT",
+          hero_title_prefix: "Discover Mongolia above the clouds with",
+          hero_lead:
+            "Scan the QR, connect instantly, and enjoy your inflight companion. Flight info, eSIM, sponsored video, and VOO streaming in one place.",
+          cta_voo: "Open VOO",
+          cta_flight: "View Flight Info",
+          tag_qr: "QR onboarding in seconds",
+          tag_lang: "MN and EN ready",
+          tag_server: "Onboard content server",
+          flight_greeting: "Enjoy your flight, guest",
+          flight_aircraft: "MIAT - Boeing 737-800",
+          seat_pill: "Seat 6E | Economy",
+          label_altitude: "Altitude",
+          label_flightno: "Flight number",
+          label_temp: "Temperature",
+          label_speed: "Ground speed",
+          label_distance: "Distance",
+          label_eta: "ETA",
+          route_start: "ULN 14:10",
+          route_mid: "1h 10m remaining",
+          route_end: "ICN 15:35",
+          quick_title: "Quick access",
+          quick_sub: "Everything from one screen",
+          quick_flight: "Flight info",
+          quick_flight_desc: "Live status, altitude, ETA",
+          quick_flight_tag: "ULN -> ICN",
+          quick_esim: "eSIM offers",
+          quick_esim_desc: "Stay connected after landing",
+          quick_esim_tag: "3GB - 5 days",
+          quick_video: "Sponsored video",
+          quick_video_desc: "Partner highlight reel",
+          quick_video_tag: "Now playing",
+          quick_voo: "VOO streaming",
+          quick_voo_desc: "Movies, music, originals",
+          quick_voo_cta: "Launch VOO",
+          section_flight_title: "Flight info",
+          section_flight_sub: "Live status and cabin details",
+          flight_status_title: "Status",
+          flight_status_desc: "On time with smooth skies over Mongolia.",
+          flight_status_route: "ULN -> ICN",
+          flight_status_alt: "Altitude 35,500 ft",
+          flight_cabin_title: "Cabin services",
+          flight_cabin_meals: "Meals: service in 20 minutes",
+          flight_cabin_power: "Seat power: rows 10-30",
+          flight_cabin_support: "Support: call cabin crew via seat panel",
+          flight_weather_title: "Destination weather",
+          flight_weather_desc: "Clear skies expected at arrival.",
+          flight_weather_wind: "Wind: light breeze",
+          flight_weather_temp: "Temperature: 6 C",
+          section_esim_title: "eSIM offers",
+          section_esim_sub: "Stay connected after landing",
+          esim_how_title: "How it works",
+          esim_how_1: "1. Pick your region and data size",
+          esim_how_2: "2. Pay securely in flight",
+          esim_how_3: "3. Activate on arrival",
+          esim_plans_title: "Recommended plans",
+          esim_plan_1: "East Asia: 3GB - 5 days",
+          esim_plan_2: "Global: 8GB - 20 days",
+          esim_plan_3: "Premium: 15GB - 30 days",
+          esim_support_title: "Support",
+          esim_support_desc: "Scan the QR on your seat pocket for step by step setup.",
+          esim_support_tag: "24/7 chat in VOO",
+          section_video_title: "Sponsored video",
+          section_video_sub: "Partner highlight reel",
+          video_title: "Discover Mongolia",
+          video_desc: "Short film featuring the steppe, sky, and city lights.",
+          video_note: "Demo only - full playback onboard.",
+          video_partner_title: "Featured partner",
+          video_partner_desc: "Route specific brand stories with QR follow ups.",
+          video_partner_tag: "Sponsored",
+          section_voo_title: "VOO access",
+          section_voo_sub: "Main experience for passengers",
+          voo_title_prefix: "Make the cabin feel like cinema with",
+          voo_desc:
+            "This demo redirects to the public VOO site. In flight, the VOO tab opens the onboard content server with movies, series, music, and originals.",
+          voo_cta: "Launch VOO",
+          voo_back: "Back to Flight",
+          voo_inside_title: "What is inside VOO",
+          voo_inside_1: "Originals, films, and series",
+          voo_inside_2: "Mongolian music and audio",
+          voo_inside_3: "Kids content and safe mode",
+          footer_left: "Powered by VOO - MIAT inflight demo",
+          footer_right: "Need help? Ask the cabin crew."
+        },
+        mn: {
+          brand_title: "VOO нислэгийн",
+          brand_sub: "MIAT demo",
+          nav_home: "Нүүр",
+          nav_flight: "Нислэг",
+          nav_esim: "eSIM",
+          nav_video: "Ивээн тэтгэсэн",
+          nav_voo: "VOO",
+          badge: "MIAT-д тавтай морил",
+          hero_title_prefix: "Тэнгэрт Монголыг мэдрэх аяллыг",
+          hero_lead:
+            "QR-аа уншуулж шууд холбогдоорой. Нислэгийн мэдээлэл, eSIM, ивээн тэтгэсэн видео, VOO стриминг бүгд нэг дор.",
+          cta_voo: "VOO нээх",
+          cta_flight: "Нислэг харах",
+          tag_qr: "QR-ээр 1 агшинд",
+          tag_lang: "MN болон EN",
+          tag_server: "Онгоцны дотоод сервер",
+          flight_greeting: "Тавтай нисээрэй",
+          flight_aircraft: "MIAT - Boeing 737-800",
+          seat_pill: "Суудал 6E | Энгийн",
+          label_altitude: "Өндөр",
+          label_flightno: "Нислэгийн дугаар",
+          label_temp: "Температур",
+          label_speed: "Газрын хурд",
+          label_distance: "Зай",
+          label_eta: "Ирэх цаг",
+          route_start: "УЛН 14:10",
+          route_mid: "1ц 10м үлдлээ",
+          route_end: "ИЧН 15:35",
+          quick_title: "Хурдан хандалт",
+          quick_sub: "Нэг дэлгэцээс бүгдийг",
+          quick_flight: "Нислэгийн мэдээлэл",
+          quick_flight_desc: "Төлөв, өндөр, ирэх цаг",
+          quick_flight_tag: "УЛН -> ИЧН",
+          quick_esim: "eSIM саналууд",
+          quick_esim_desc: "Буусны дараа холбоо",
+          quick_esim_tag: "3ГБ - 5 өдөр",
+          quick_video: "Ивээн тэтгэсэн видео",
+          quick_video_desc: "Онцлох түншийн бичлэг",
+          quick_video_tag: "Одоо тоглож байна",
+          quick_voo: "VOO стриминг",
+          quick_voo_desc: "Кино, хөгжим, контент",
+          quick_voo_cta: "VOO нээх",
+          section_flight_title: "Нислэгийн мэдээлэл",
+          section_flight_sub: "Амьд мэдээлэл, кабин",
+          flight_status_title: "Төлөв",
+          flight_status_desc: "Монголын дээгүүр тайван нисэж байна.",
+          flight_status_route: "УЛН -> ИЧН",
+          flight_status_alt: "Өндөр 35,500 ft",
+          flight_cabin_title: "Кабины үйлчилгээ",
+          flight_cabin_meals: "Хоол: 20 минутын дараа",
+          flight_cabin_power: "Суудлын цахилгаан: 10-30 эгнээ",
+          flight_cabin_support: "Тусламж: суудлын самбар",
+          flight_weather_title: "Очих хотын цаг агаар",
+          flight_weather_desc: "Цэлмэг байх төлөвтэй.",
+          flight_weather_wind: "Салхи: намуухан",
+          flight_weather_temp: "Температур: 6 C",
+          section_esim_title: "eSIM саналууд",
+          section_esim_sub: "Буусны дараа холбоотой бай",
+          esim_how_title: "Хэрхэн ажиллах вэ",
+          esim_how_1: "1. Бүс нутаг ба дата сонгох",
+          esim_how_2: "2. Нислэгийн үеэр төлөх",
+          esim_how_3: "3. Буусны дараа идэвхжүүлэх",
+          esim_plans_title: "Санал болгож буй багцууд",
+          esim_plan_1: "Зүүн Ази: 3ГБ - 5 өдөр",
+          esim_plan_2: "Дэлхий: 8ГБ - 20 өдөр",
+          esim_plan_3: "Премиум: 15ГБ - 30 өдөр",
+          esim_support_title: "Тусламж",
+          esim_support_desc: "Суудлын халаас дахь QR-ыг уншуулж заавар авна.",
+          esim_support_tag: "VOO дотор 24/7 чат",
+          section_video_title: "Ивээн тэтгэсэн видео",
+          section_video_sub: "Онцлох түншийн үзүүлэн",
+          video_title: "Монголыг нээцгээе",
+          video_desc: "Тал нутаг, тэнгэр, хотын гэрэл.",
+          video_note: "Демо хувилбар - бүрэн үзвэр онгоцонд.",
+          video_partner_title: "Онцлох түнш",
+          video_partner_desc: "Маршруттай уялдсан брэндийн түүхүүд.",
+          video_partner_tag: "Ивээн тэтгэсэн",
+          section_voo_title: "VOO хандалт",
+          section_voo_sub: "Зорчигчийн үндсэн туршлага",
+          voo_title_prefix: "Кабиныг кино театр болгох",
+          voo_desc:
+            "Энэ демо нь VOO-ийн олон нийтэд нээлттэй сайтад шилжинэ. Нислэгийн үед VOO таб нь дотоод серверийг нээж кино, цуврал, хөгжим, оригинал контентыг үзүүлнэ.",
+          voo_cta: "VOO нээх",
+          voo_back: "Нислэг рүү буцах",
+          voo_inside_title: "VOO дотор",
+          voo_inside_1: "Оригинал, кино, цуврал",
+          voo_inside_2: "Монгол хөгжим, аудио",
+          voo_inside_3: "Хүүхдийн контент, safe mode",
+          footer_left: "VOO - MIAT нислэгийн демо",
+          footer_right: "Тусламж хэрэгтэй бол стюардыг дуудна уу."
+        }
+      };
+
+      const applyLang = (lang) => {
+        document.documentElement.lang = lang;
+        document.querySelectorAll("[data-i18n]").forEach((el) => {
+          const key = el.getAttribute("data-i18n");
+          const value = translations[lang][key];
+          if (value) {
+            el.textContent = value;
+          }
+        });
+      };
+
+      document.querySelectorAll("[data-lang]").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          document
+            .querySelectorAll("[data-lang]")
+            .forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+          applyLang(btn.getAttribute("data-lang"));
+        });
+      });
+
+      applyLang("en");
+    </script>
   </body>
 </html>
