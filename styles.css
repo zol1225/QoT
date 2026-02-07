@@ -26,22 +26,10 @@ body {
   font-family: "Sora", "Segoe UI", sans-serif;
   color: var(--ink);
   line-height: 1.5;
-  background: radial-gradient(
-      circle at 15% 20%,
-      rgba(232, 58, 63, 0.28),
-      transparent 45%
-    ),
-    radial-gradient(
-      circle at 80% -10%,
-      rgba(255, 122, 89, 0.2),
-      transparent 45%
-    ),
-    radial-gradient(
-      circle at 80% 80%,
-      rgba(255, 179, 71, 0.18),
-      transparent 55%
-    ),
-    linear-gradient(160deg, var(--bg) 0%, var(--bg-2) 100%);
+  background: url("background.png") center 20% / cover no-repeat, #0b0f14;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   min-height: 100vh;
 }
 
@@ -59,19 +47,8 @@ a {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(
-      circle at 50% 30%,
-      rgba(255, 255, 255, 0.06),
-      transparent 50%
-    ),
-    repeating-linear-gradient(
-      130deg,
-      rgba(255, 255, 255, 0.02),
-      rgba(255, 255, 255, 0.02) 2px,
-      transparent 2px,
-      transparent 10px
-    );
-  opacity: 0.6;
+  background: none;
+  opacity: 0;
   pointer-events: none;
   z-index: 0;
 }
@@ -79,7 +56,7 @@ a {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 18px var(--page-pad) 110px;
+  padding: 0 var(--page-pad) 110px;
   position: relative;
   z-index: 1;
 }
@@ -95,9 +72,9 @@ a {
   width: calc(100% + (2 * var(--page-pad)));
   margin-left: calc(-1 * var(--page-pad));
   padding: 12px var(--page-pad);
-  background: rgba(11, 15, 20, 0.85);
+  background: rgba(11, 15, 20, 0.82);
   backdrop-filter: blur(14px);
-  border-bottom: 1px solid var(--stroke);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .brand {
@@ -124,13 +101,6 @@ a {
   line-height: 1.1;
 }
 
-.brand-text span:last-child {
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  color: var(--muted);
-}
-
 .nav {
   display: flex;
   align-items: center;
@@ -139,6 +109,13 @@ a {
   white-space: nowrap;
   font-size: 0.85rem;
   color: var(--muted);
+  overflow-x: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.nav::-webkit-scrollbar {
+  height: 0;
 }
 
 .nav a {
@@ -545,12 +522,24 @@ a {
   padding: 26px 0 12px;
 }
 
+.hero-copy {
+  background: rgba(8, 12, 16, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 22px;
+  padding: 20px 20px 22px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+  max-width: 560px;
+}
+
 .hero-copy h1 {
   font-size: clamp(2.1rem, 4.4vw, 3.6rem);
   line-height: 1.1;
   margin: 10px 0 12px;
   letter-spacing: -0.02em;
+  text-shadow: 0 16px 30px rgba(0, 0, 0, 0.35);
 }
+
 
 .hero-copy h1 strong {
   color: var(--accent);
@@ -560,6 +549,7 @@ a {
   color: var(--muted);
   max-width: 520px;
   font-size: 1rem;
+  text-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
 }
 
 .badge {
@@ -927,6 +917,7 @@ section {
     grid-area: nav;
     overflow-x: auto;
     padding-top: 6px;
+    justify-content: space-between;
   }
 
   .nav::-webkit-scrollbar {
@@ -975,4 +966,5 @@ section {
   }
 
 }
+
 

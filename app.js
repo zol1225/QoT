@@ -1,12 +1,13 @@
 ﻿const translations = {
   en: {
-    brand_title: "Mobiflight",
-    brand_sub: "for MIAT",
+    brand_title: "MIAT Mongolian Airlines",
+    brand_sub: "",
     nav_home: "Home",
     nav_flight: "Flight",
     nav_esim: "eSIM",
     nav_video: "Sponsored",
     nav_voo: "VOO",
+    nav_about: "About",
     status_text: "MIAT inflight",
     aircraft_tag: "Aircraft",
     aircraft_overview: "Overview",
@@ -17,8 +18,12 @@
     spec_range: "Range",
     spec_speed: "Cruise",
     badge: "Welcome aboard",
-    hero_title_prefix: "Mobiflight — your friend in the sky.",
+    hero_title_prefix: "Your friend in the sky.",
     hero_lead: "The journey can be long, but it doesn't have to be boring.",
+    demo_desc: "Demo version — full content coming soon.",
+    about_title: "About MIAT",
+    about_desc: "MIAT inflight portal with flight info, eSIM, and entertainment access.",
+    about_points_title: "Built for the cabin",
     cta_voo: "Open VOO",
     cta_flight: "Flight details",
     tab_voo: "VOO",
@@ -114,17 +119,18 @@
     voo_inside_1: "Originals, films, and series",
     voo_inside_2: "Mongolian music and audio",
     voo_inside_3: "Kids content and safe mode",
-    footer_left: "Mobiflight for MIAT - powered by VOO",
+    footer_left: "MIAT inflight portal - powered by VOO",
     footer_right: "Need help? Ask the cabin crew."
   },
   mn: {
-    brand_title: "Mobiflight",
-    brand_sub: "MIAT-д зориулсан",
+    brand_title: "МИАТ Монголын Агаарын Тээвэр",
+    brand_sub: "",
     nav_home: "Нүүр",
     nav_flight: "Нислэг",
     nav_esim: "eSIM",
     nav_video: "Ивээн тэтгэсэн",
     nav_voo: "VOO",
+    nav_about: "Бидний тухай",
     status_text: "MIAT нислэг",
     aircraft_tag: "Нисэх онгоц",
     aircraft_overview: "Тойм",
@@ -135,8 +141,12 @@
     spec_range: "Хүрээ",
     spec_speed: "Нислэгийн хурд",
     badge: "Тавтай морил",
-    hero_title_prefix: "Mobiflight — тэнгэрт таны найз.",
+    hero_title_prefix: "Тэнгэрт таны найз.",
     hero_lead: "Аяллын цаг урт байж болно, харин уйтгартай байх албагүй.",
+    demo_desc: "Демо хувилбар — бүрэн контент удахгүй нэмэгдэнэ.",
+    about_title: "МИАТ-ийн тухай",
+    about_desc: "МИАТ-ийн нислэгийн портал. Нислэгийн мэдээлэл, eSIM, зугаацах контентыг нэг төвд нэгтгэнэ.",
+    about_points_title: "Онгоцонд зориулсан",
     cta_voo: "VOO нээх",
     cta_flight: "Нислэгийн мэдээлэл",
     tab_voo: "VOO",
@@ -226,7 +236,7 @@
     voo_inside_1: "Оригинал, кино, цуврал",
     voo_inside_2: "Монгол хөгжим, аудио",
     voo_inside_3: "Хүүхдийн контент, safe mode",
-    footer_left: "Mobiflight - MIAT-д зориулсан, VOO-оор дэмжигдсэн",
+    footer_left: "МИАТ нислэгийн портал - VOO-оор дэмжигдсэн",
     footer_right: "Тусламж хэрэгтэй бол стюардыг дуудна уу."
   }
 };
@@ -258,3 +268,5 @@ document.querySelectorAll("[data-lang]").forEach((btn) => {
     setActiveLang(btn.getAttribute("data-lang"));
   });
 });
+
+
