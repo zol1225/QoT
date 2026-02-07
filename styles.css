@@ -136,6 +136,7 @@ a {
   align-items: center;
   gap: 8px;
   flex-wrap: nowrap;
+  white-space: nowrap;
   font-size: 0.85rem;
   color: var(--muted);
 }
@@ -157,6 +158,19 @@ a {
   background: linear-gradient(120deg, #e83a3f, #ff7a59);
   color: #1a0b0c;
   font-weight: 700;
+  border-color: transparent;
+  box-shadow: 0 12px 28px rgba(232, 58, 63, 0.3);
+}
+
+.nav a.active {
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--stroke);
+}
+
+.nav a.active.cta {
+  background: linear-gradient(120deg, #e83a3f, #ff7a59);
+  color: #1a0b0c;
   border-color: transparent;
   box-shadow: 0 12px 28px rgba(232, 58, 63, 0.3);
 }
@@ -850,13 +864,7 @@ section {
 }
 
 .footer {
-  margin-top: 70px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  justify-content: space-between;
-  color: var(--muted);
-  font-size: 0.9rem;
+  display: none;
 }
 
 .reveal {
@@ -899,9 +907,35 @@ section {
 
 }
 
-@media (max-width: 560px) {
+@media (max-width: 720px) {
   .topbar {
     grid-template-columns: 1fr auto;
+    grid-template-areas:
+      "brand lang"
+      "nav nav";
+  }
+
+  .brand {
+    grid-area: brand;
+  }
+
+  .lang-toggle {
+    grid-area: lang;
+  }
+
+  .nav {
+    grid-area: nav;
+    overflow-x: auto;
+    padding-top: 6px;
+  }
+
+  .nav::-webkit-scrollbar {
+    height: 0;
+  }
+}
+
+@media (max-width: 560px) {
+  .topbar {
     gap: 10px;
   }
 
@@ -911,7 +945,7 @@ section {
 
   .nav {
     grid-column: 1 / -1;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 6px;
     font-size: 0.8rem;
   }

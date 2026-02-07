@@ -28,7 +28,7 @@
 
           <nav class="nav">
             <a href="index.html" data-i18n="nav_home">Home</a>
-            <a href="flight.html" data-i18n="nav_flight">Flight</a>
+            <a class="active" href="flight.html" data-i18n="nav_flight">Flight</a>
             <a class="cta" href="voo.html" data-i18n="nav_voo">VOO</a>
           </nav>
 
@@ -40,8 +40,8 @@
 
         <section class="hero">
           <div class="hero-copy reveal delay-1">
-            <h1 data-i18n="section_flight_title">Flight info</h1>
-            <p data-i18n="section_flight_sub">Live status</p>
+            <h1 data-i18n="flight_aircraft">MIAT - Boeing 737-800</h1>
+            <p data-i18n="flight_destination">Destination: ICN (Seoul)</p>
             <div class="hero-actions">
               <a class="btn primary" href="voo.html" data-i18n="cta_voo">Open VOO</a>
               <a class="btn secondary" href="index.html" data-i18n="nav_home">Home</a>
@@ -51,28 +51,28 @@
           <div class="flight-panel reveal delay-2">
             <div class="flight-title">
               <div>
-                <h3 data-i18n="flight_aircraft">MIAT - Boeing 737-800</h3>
-                <small data-i18n="route_end">ICN 15:35</small>
+                <h3 data-i18n="flight_time_left_title">Time left</h3>
+                <small data-i18n="flight_time_left_value">1h 10m remaining</small>
               </div>
-              <span class="flight-pill" data-i18n="route_mid">1h 10m remaining</span>
             </div>
             <div class="flight-grid">
               <div class="flight-card">
-                <span data-i18n="label_distance">Route</span>
-                <strong data-i18n="flight_status_route">ULN -> ICN</strong>
+                <span data-i18n="label_remaining_km">Remaining</span>
+                <strong>820 km</strong>
               </div>
               <div class="flight-card">
-                <span data-i18n="label_eta">ETA</span>
-                <strong>15:35</strong>
+                <span data-i18n="label_speed">Speed</span>
+                <strong>820 km/h</strong>
+              </div>
+              <div class="flight-card">
+                <span data-i18n="label_destination">Destination</span>
+                <strong>ICN</strong>
               </div>
             </div>
           </div>
         </section>
 
-        <div class="footer">
-          <span data-i18n="footer_left">Mobiflight for MIAT - powered by VOO</span>
-          <span data-i18n="footer_right">Need help? Ask the cabin crew.</span>
-        </div>
+        <div class="footer"></div>
       </div>
     </div>
 
