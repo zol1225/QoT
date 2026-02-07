@@ -21,16 +21,26 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+}
+
 body {
   margin: 0;
   font-family: "Sora", "Segoe UI", sans-serif;
   color: var(--ink);
   line-height: 1.5;
-  background: url("background.png") center center / 100% 100% no-repeat, #0b0f14;
-  background-size: 100% 100%;
-  background-position: center center;
-  background-repeat: no-repeat;
-  min-height: 100vh;
+  background: url("background.png") center center / cover no-repeat, #0b0f14;
+  min-height: 100svh;
+}
+
+@media (max-width: 480px) {
+  body {
+    background-position: center top;
+    background-size: 130% auto;
+  }
 }
 
 a {
@@ -41,6 +51,7 @@ a {
 .page {
   position: relative;
   overflow: hidden;
+  min-height: 100svh;
 }
 
 .page::before {
