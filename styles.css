@@ -28,7 +28,7 @@ body {
   line-height: 1.5;
   background: url("background.png") center 20% / cover no-repeat, #0b0f14;
   background-size: cover;
-  background-position: center;
+  background-position: center 20%;
   background-repeat: no-repeat;
   min-height: 100vh;
 }
@@ -79,8 +79,10 @@ a {
 
 .home .topbar {
   grid-template-columns: 1fr auto;
-  background: rgba(11, 15, 20, 0.78);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  background: transparent;
+  border-bottom: none;
+  backdrop-filter: none;
+  box-shadow: none;
 }
 
 .home .topbar .brand {
@@ -93,6 +95,9 @@ a {
 
 .home .lang-toggle {
   justify-self: end;
+  background: rgba(0, 0, 0, 0.6);
+  border-color: rgba(255, 255, 255, 0.12);
+  backdrop-filter: none;
 }
 
 .home-shell {
@@ -269,10 +274,11 @@ a {
 }
 
 .blank .topbar {
-  grid-template-columns: 1fr;
-  justify-items: end;
+  grid-template-columns: 1fr auto;
   background: transparent;
   border-bottom: none;
+  backdrop-filter: none;
+  box-shadow: none;
 }
 
 .blank .topbar .brand,
@@ -285,6 +291,24 @@ a {
   border-color: rgba(255, 255, 255, 0.12);
   backdrop-filter: none;
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+}
+
+.blank .back-btn {
+  justify-self: start;
+  align-self: center;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.blank .back-btn:hover {
+  background: rgba(0, 0, 0, 0.7);
 }
 
 .blank-shell {
