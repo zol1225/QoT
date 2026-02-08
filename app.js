@@ -171,7 +171,7 @@
     spec_speed: "Нислэгийн хурд",
     badge: "Тавтай морил",
     hero_title_prefix: "Тэнгэрт таны найз.",
-    hero_lead: "Аяллын цаг урт байж болно, харин уйтгартай байх албагүй.",
+    hero_lead: "nislegiin tsag urt baij bolno harin uitgartai baih albagui",
     demo_desc: "Демо хувилбар — бүрэн контент удахгүй нэмэгдэнэ.",
     about_title: "МИАТ-ийн тухай",
     about_desc: "МИАТ-ийн нислэгийн портал. Нислэгийн мэдээлэл, eSIM, зугаацах контентыг нэг төвд нэгтгэнэ.",
