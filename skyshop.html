@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MIAT | Sky Shop</title>
+    <meta name="description" content="MIAT Sky Shop." />
+    <meta name="color-scheme" content="dark" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="blank">
+    <div class="page">
+      <div class="container">
+        <header class="topbar">
+          <a class="back-btn" href="tand-heregtei.html" data-i18n="back_home">Back</a>
+
+          <div class="lang-toggle" aria-label="Language selector">
+            <button class="active" type="button" data-lang="en">EN</button>
+            <button type="button" data-lang="mn">MN</button>
+            <button class="disabled" type="button" disabled>JP</button>
+            <button class="disabled" type="button" disabled>KR</button>
+          </div>
+        </header>
+
+        <main class="shop-shell">
+          <div class="shop-top">
+            <div class="shop-top-left">
+              <span class="flight-seat" data-i18n="seat_label">Seat 6E</span>
+            </div>
+            <div class="shop-notice" data-i18n="skyshop_cash">Cash only on board</div>
+          </div>
+
+          <h1 class="shop-title" data-i18n="skyshop_title">Sky Shop</h1>
+          <p class="shop-lead" data-i18n="skyshop_lead">
+            Onboard exclusive items with special pricing.
+          </p>
+
+          <div class="shop-grid">
+            <div class="shop-card">
+              <img class="shop-thumb" src="shop1.png" alt="Souvenir" />
+              <h3 data-i18n="skyshop_item1">Souvenir Set</h3>
+              <div class="shop-price" data-i18n="skyshop_price1">USD 25</div>
+              <button class="btn primary" type="button" data-order data-i18n="skyshop_order">Захиалах</button>
+            </div>
+            <div class="shop-card">
+              <img class="shop-thumb" src="shop2.jpg" alt="Vodka" />
+              <h3 data-i18n="skyshop_item2">Vodka</h3>
+              <div class="shop-price" data-i18n="skyshop_price2">USD 18</div>
+              <button class="btn primary" type="button" data-order data-i18n="skyshop_order">Захиалах</button>
+            </div>
+          </div>
+        </main>
+
+        <div class="footer"></div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+      document.querySelectorAll("[data-order]").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const lang = document.documentElement.lang || "mn";
+          const message =
+            lang === "mn"
+              ? "Таны захиалгын хүсэлтийг стюард руу илгээлээ."
+              : "Your order request has been sent to the cabin crew.";
+          alert(message);
+        });
+      });
+    </script>
+  </body>
+</html>
