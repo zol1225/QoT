@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MIAT | Chat</title>
+    <meta name="description" content="Passenger chat lounge." />
+    <meta name="color-scheme" content="dark" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="blank">
+    <div class="page">
+      <div class="container">
+        <header class="topbar">
+          <a class="back-btn" href="tand-heregtei.html" data-i18n="back_home">Back</a>
+
+          <div class="lang-toggle" aria-label="Language selector">
+            <button class="active" type="button" data-lang="en">EN</button>
+            <button type="button" data-lang="mn">MN</button>
+            <button class="disabled" type="button" disabled>JP</button>
+            <button class="disabled" type="button" disabled>KR</button>
+          </div>
+        </header>
+
+        <main class="chat-shell">
+          <div class="chat-head">
+            <h1 data-i18n="chat_title">Flyhub Chat</h1>
+            <p data-i18n="chat_lead">
+              Meet fellow passengers, swap tips, and share your journey.
+            </p>
+          </div>
+
+          <div class="chat-cards">
+            <div class="chat-card">
+              <div class="chat-avatar">A</div>
+              <div class="chat-info">
+                <strong>Ariunaa · 6A</strong>
+                <span data-i18n="chat_msg1">Anyone visiting Seoul this week?</span>
+              </div>
+            </div>
+            <div class="chat-card">
+              <div class="chat-avatar">B</div>
+              <div class="chat-info">
+                <strong>Bat · 12C</strong>
+                <span data-i18n="chat_msg2">Looking for window photo tips.</span>
+              </div>
+            </div>
+            <div class="chat-card">
+              <div class="chat-avatar">S</div>
+              <div class="chat-info">
+                <strong>Sarangerel · 3D</strong>
+                <span data-i18n="chat_msg3">Best coffee in ICN airport?</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="chat-actions">
+            <button class="btn primary" type="button" data-i18n="chat_join">Join the lounge</button>
+            <button class="btn secondary" type="button" data-i18n="chat_rules">Community rules</button>
+          </div>
+        </main>
+
+        <div class="footer"></div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
