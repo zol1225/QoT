@@ -340,7 +340,7 @@ a {
 }
 
 .help-shell {
-  max-width: 720px;
+  width: min(100%, 1100px);
   margin: 18px auto 0;
   padding: 28px 18px 40px;
 }
@@ -359,7 +359,7 @@ a {
 
 .help-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 12px;
 }
 
@@ -431,6 +431,32 @@ a {
 @media (max-width: 720px) {
   .help-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 900px) {
+  .help-shell {
+    padding: 32px 24px 48px;
+  }
+
+  .help-grid {
+    gap: 18px;
+  }
+
+  .help-card {
+    padding: 18px;
+  }
+
+  .help-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .help-card p {
+    font-size: 0.95rem;
+  }
+
+  .sponsor-track img {
+    height: 44px;
   }
 }
 
