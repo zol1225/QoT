@@ -398,6 +398,36 @@ a {
   width: 100%;
 }
 
+.sponsor-marquee {
+  overflow: hidden;
+  margin: 10px auto 0;
+  padding: 10px 0;
+}
+
+.sponsor-track {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  width: max-content;
+  animation: sponsor-scroll 18s linear infinite;
+}
+
+.sponsor-track img {
+  height: 34px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.35));
+}
+
+@keyframes sponsor-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
 @media (max-width: 720px) {
   .help-grid {
     grid-template-columns: 1fr;
